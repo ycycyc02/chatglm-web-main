@@ -41,8 +41,8 @@ const { isMobile } = useBasicLayout()
         class="flex items-center justify-center w-11 h-11"
         @click="handleUpdateCollapsed"
       >
-        <SvgIcon v-if="collapsed" class="text-2xl" icon="ri:align-justify" />
-        <SvgIcon v-else class="text-2xl" icon="ri:align-right" />
+        <SvgIcon v-if="collapsed" class="text-2xl" icon="uil:align-justify" />
+        <SvgIcon v-else class="text-2xl" icon="uil:align-right" />
       </button>
       <h1
         class="flex-1 px-4 overflow-hidden text-center cursor-pointer select-none text-ellipsis whitespace-nowrap"
@@ -55,11 +55,11 @@ const { isMobile } = useBasicLayout()
         class="flex items-center justify-center w-11 h-11"
         @click="onScrollToBottom"
       >
-        <SvgIcon class="text-2xl" icon="ri:arrow-down-s-line" />
+        <SvgIcon class="text-2xl" icon="uil:arrow-down-right" />
       </button>
       <HoverButton class="flex items-center justify-center w-11 h-11" :tooltip="$t('setting.setting')" @click="showSetting = true">
         <span class="text-xl text-[#4f555e] dark:text-white">
-          <SvgIcon icon="ri:settings-4-line" />
+          <SvgIcon icon="uil:setting" />
         </span>
       </HoverButton>
       <Setting v-if="isMobile" v-model:visible="showSetting" />

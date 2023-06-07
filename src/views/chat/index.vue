@@ -5,6 +5,7 @@ import { storeToRefs } from 'pinia'
 import { NAutoComplete, NButton, NInput, useDialog, useMessage } from 'naive-ui'
 import Recorder from 'recorder-core/recorder.mp3.min'
 import html2canvas from 'html2canvas'
+import imgUrl from '../../assets/logo.png'
 import { Message } from './components'
 import { useScroll } from './hooks/useScroll'
 import { useChat } from './hooks/useChat'
@@ -771,7 +772,7 @@ onUnmounted(() => {
         >
           <template v-if="!dataSources.length">
             <div class="flex items-center justify-center mt-4 text-center text-neutral-300">
-              <SvgIcon icon="ri:bubble-chart-fill" class="mr-2 text-3xl" />
+              <img :src="imgUrl" style="height:30px;width:30px">
               <span>ChatGLM Web</span>
             </div>
           </template>
@@ -791,7 +792,7 @@ onUnmounted(() => {
               <div class="sticky bottom-0 left-0 flex justify-center">
                 <NButton v-if="loading" type="warning" @click="handleStop">
                   <template #icon>
-                    <SvgIcon icon="ri:stop-circle-line" />
+                    <SvgIcon icon="mdi:stop" />
                   </template>
                   {{ $t('chat.stopResponding') }}
                 </NButton>
@@ -807,22 +808,22 @@ onUnmounted(() => {
           <div v-if="actionVisible" class="flex items-center space-x-2">
             <HoverButton @click="handleClear">
               <span class="text-xl text-[#4f555e] dark:text-white">
-                <SvgIcon icon="ri:delete-bin-line" />
+                <SvgIcon icon="fluent:delete-12-regular" />
               </span>
             </HoverButton>
             <HoverButton v-if="!isMobile" @click="handleExport">
               <span class="text-xl text-[#4f555e] dark:text-white">
-                <SvgIcon icon="ri:download-2-line" />
+                <SvgIcon icon="uil:image-download" />
               </span>
             </HoverButton>
             <HoverButton v-if="!isMobile" @click="toggleUsingContext">
               <span class="text-xl" :class="{ 'text-[#4b9e5f]': usingContext, 'text-[#a8071a]': !usingContext }">
-                <SvgIcon icon="ri:chat-history-line" />
+                <SvgIcon icon="uil:chat-info" />
               </span>
             </HoverButton>
             <HoverButton v-if="!isMobile" @click="toggleUsingKnowledge">
               <span class="text-xl" :class="{ 'text-[#4b9e5f]': usingKnowledge, 'text-[#a8071a]': !usingKnowledge }">
-                <SvgIcon icon="carbon:ibm-watson-knowledge-catalog" />
+                <SvgIcon icon="uil:cloud-database-tree" />
               </span>
             </HoverButton>
             <!-- <HoverButton
@@ -877,7 +878,7 @@ onUnmounted(() => {
           >
             <template #icon>
               <span class="dark:text-black">
-                <SvgIcon icon="ri:send-plane-fill" />
+                <SvgIcon icon="streamline:mail-send-email-send-email-paper-airplane" />
               </span>
             </template>
           </NButton>

@@ -34,6 +34,17 @@ function updateChatgptParams(options: Partial<UserInfo>) {
               100: $t('setting.chatgpt_memory_choice_3'),
             }"
             step="mark"
+            :format-tooltip="(value: number) => {
+              if (value === 1){
+                return `${5}`
+              }
+              else if (value === 50){
+                return `${20}`
+              }
+              else {
+                return 'all'
+              }
+            }"
             @update:value="updateChatgptParams({ chatgpt_memory })"
           />
         </div>

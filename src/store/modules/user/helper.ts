@@ -19,7 +19,7 @@ export interface UserState {
 export function defaultSetting(): UserState {
   return {
     userInfo: {
-      avatar: 'https://api.multiavatar.com/0.8481955987976837.svg',
+      avatar: 'https://api.multiavatar.com/0.9830069950159417.svg',
       name: 'ChatGLM Web',
 
       description: '',

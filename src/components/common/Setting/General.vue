@@ -41,17 +41,17 @@ const themeOptions: { label: string; key: Theme; icon: string }[] = [
   {
     label: 'Auto',
     key: 'auto',
-    icon: 'ri:contrast-line',
+    icon: 'mdi:theme-light-dark',
   },
   {
     label: 'Light',
     key: 'light',
-    icon: 'ri:sun-foggy-line',
+    icon: 'mdi:weather-sunny',
   },
   {
     label: 'Dark',
     key: 'dark',
-    icon: 'ri:moon-foggy-line',
+    icon: 'mdi:moon-and-stars',
   },
 ]
 
@@ -83,8 +83,8 @@ function handleReset() {
   <div class="p-4 space-y-5 min-h-[200px]">
     <div class="space-y-6">
       <div class="flex items-center space-x-4">
-        <span class="flex-shrink-0 w-[60px]">{{ $t('setting.avatarLink') }}</span>
-        <div class="w-[200px]">
+        <span class="flex-shrink-0 w-[80px]">{{ $t('setting.avatarLink') }}</span>
+        <div class="w-[300px]">
           <NInput v-model:value="avatar" placeholder="" />
         </div>
         <NButton size="small" text type="primary" @click="updateUserInfo({ avatar })">
@@ -92,13 +92,13 @@ function handleReset() {
         </NButton>
         <HoverButton :tooltip="$t('setting.randomAvatar')" @click="randomAvatar()">
           <span class="text-xl text-[#4f555e] dark:text-white">
-            <SvgIcon class="text-lg" icon="mdi:dice-5-outline" />
+            <SvgIcon class="text-lg" icon="tabler:refresh" />
           </span>
         </HoverButton>
       </div>
       <div class="flex items-center space-x-4">
-        <span class="flex-shrink-0 w-[60px]" />
-        <div class="w-[200px]">
+        <span class="flex-shrink-0 w-[80px]" />
+        <div class="w-[300px]">
           <NImage
             v-model:src="userInfo.avatar"
             width="100"
@@ -108,8 +108,8 @@ function handleReset() {
       </div>
 
       <div class="flex items-center space-x-4">
-        <span class="flex-shrink-0 w-[60px]">{{ $t('setting.name') }}</span>
-        <div class="w-[200px]">
+        <span class="flex-shrink-0 w-[80px]">{{ $t('setting.name') }}</span>
+        <div class="w-[300px]">
           <NInput v-model:value="name" placeholder="" />
         </div>
         <NButton size="small" text type="primary" @click="updateUserInfo({ name })">
@@ -117,7 +117,7 @@ function handleReset() {
         </NButton>
       </div>
       <div class="flex items-center space-x-4">
-        <span class="flex-shrink-0 w-[60px]">{{ $t('setting.description') }}</span>
+        <span class="flex-shrink-0 w-[80px]">{{ $t('setting.description') }}</span>
         <div class="flex-1">
           <NInput v-model:value="description" placeholder="" />
         </div>
@@ -126,7 +126,7 @@ function handleReset() {
         </NButton>
       </div>
       <div class="flex items-center space-x-4">
-        <span class="flex-shrink-0 w-[60px]">{{ $t('setting.theme') }}</span>
+        <span class="flex-shrink-0 w-[80px]">{{ $t('setting.theme') }}</span>
         <div class="flex flex-wrap items-center gap-4">
           <template v-for="item of themeOptions" :key="item.key">
             <NButton
@@ -142,7 +142,7 @@ function handleReset() {
         </div>
       </div>
       <div class="flex items-center space-x-4">
-        <span class="flex-shrink-0 w-[60px]">{{ $t('setting.language') }}</span>
+        <span class="flex-shrink-0 w-[80px]">{{ $t('setting.language') }}</span>
         <div class="flex flex-wrap items-center gap-4">
           <template v-for="item of languageOptions" :key="item.key">
             <NButton
@@ -156,7 +156,7 @@ function handleReset() {
         </div>
       </div>
       <div class="flex items-center space-x-4">
-        <span class="flex-shrink-0 w-[60px]">{{ $t('setting.resetUserInfo') }}</span>
+        <span class="flex-shrink-0 w-[80px]">{{ $t('setting.resetUserInfo') }}</span>
         <NButton size="small" text type="primary" @click="handleReset">
           {{ $t('common.reset') }}
         </NButton>

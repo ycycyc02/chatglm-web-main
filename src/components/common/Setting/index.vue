@@ -44,14 +44,14 @@ function handleReload() {
       <NTabs v-model:value="active" type="line" animated>
         <NTabPane name="Advance" tab="Advance">
           <template #tab>
-            <SvgIcon class="text-lg" icon="ri:list-settings-line" />
+            <SvgIcon class="text-lg" icon="streamline:interface-setting-slider-horizontal-square-adjust-controls-fader-horizontal-settings-slider-square" />
             <span class="ml-2">{{ $t('setting.advance') }}</span>
           </template>
           <Advance />
         </NTabPane>
         <NTabPane name="General" tab="General">
           <template #tab>
-            <SvgIcon class="text-lg" icon="ri:file-user-line" />
+            <SvgIcon class="text-lg" icon="tabler:user-cog" />
             <span class="ml-2">{{ $t('setting.general') }}</span>
           </template>
           <div class="min-h-[100px]">

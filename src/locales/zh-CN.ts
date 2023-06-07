@@ -100,7 +100,6 @@ export default {
     SomethingWrongInOpenaiWhisperApi: '访问OpenAI Whisper API出错，请稍后再试',
   },
   store: {
-    siderButton: '提示词商店',
     local: '本地',
     online: '在线',
     title: '标题',

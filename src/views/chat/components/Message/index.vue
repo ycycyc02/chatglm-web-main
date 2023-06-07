@@ -36,12 +36,12 @@ const options = computed(() => {
     {
       label: t('chat.copy'),
       key: 'copyText',
-      icon: iconRender({ icon: 'ri:file-copy-2-line' }),
+      icon: iconRender({ icon: 'uil:copy' }),
     },
     {
       label: t('common.delete'),
       key: 'delete',
-      icon: iconRender({ icon: 'ri:delete-bin-line' }),
+      icon: iconRender({ icon: 'fluent:delete-12-regular' }),
     },
   ]
   if (!props.inversion) {
@@ -102,11 +102,11 @@ function handleRegenerate() {
             class="mb-2 transition text-neutral-300 hover:text-neutral-800 dark:hover:text-neutral-300"
             @click="handleRegenerate"
           >
-            <SvgIcon icon="ri:restart-line" />
+            <SvgIcon icon="codicon:debug-restart" />
           </button>
           <NDropdown :placement="!inversion ? 'right' : 'left'" :options="options" @select="handleSelect">
             <button class="transition text-neutral-300 hover:text-neutral-800 dark:hover:text-neutral-200">
-              <SvgIcon icon="ri:more-2-fill" />
+              <SvgIcon icon="ant-design:more-outlined" />
             </button>
           </NDropdown>
         </div>

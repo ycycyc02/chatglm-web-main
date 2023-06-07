@@ -99,7 +99,6 @@ export default {
     SomethingWrongInOpenaiWhisperApi: 'Oops, something went wrong in OpenAI Whisper API. Please try again later.',
   },
   store: {
-    siderButton: 'Prompt Store',
     local: 'Local',
     online: 'Online',
     title: 'Title',
