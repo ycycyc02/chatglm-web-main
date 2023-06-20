@@ -821,11 +821,11 @@ onUnmounted(() => {
                 <SvgIcon icon="uil:chat-info" />
               </span>
             </HoverButton>
-            <HoverButton v-if="!isMobile" @click="toggleUsingKnowledge">
+            <!-- <HoverButton v-if="!isMobile" @click="toggleUsingKnowledge">
               <span class="text-xl" :class="{ 'text-[#4b9e5f]': usingKnowledge, 'text-[#a8071a]': !usingKnowledge }">
                 <SvgIcon icon="uil:cloud-database-tree" />
               </span>
-            </HoverButton>
+            </HoverButton> -->
             <!-- <HoverButton
               v-if="!audioMode"
               @click="audioMode = !audioMode"
